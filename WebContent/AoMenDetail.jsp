@@ -1,0 +1,135 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/index_1366.css"  type="text/css"/>
+    <link href="css/zzsc.css" type="text/css" rel="stylesheet"/>
+    <link href="css/景点.css" type="text/css" rel="stylesheet"/>
+    <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="js/nav_slider.js"></script>
+    <script src="js/jssor.slider-25.1.0.min.js" type="text/javascript"></script>
+</head>
+<body>
+<!--首页导航栏-->
+<div id="header">
+    <img id="smalllogo" src="img/picture/smalllogo.png" />
+    <div id="nav">
+        <ul>
+            <li><a href="index.jsp">首页</a></li>
+            <li><a href="travel_atlas.jsp">旅游图谱</a></li>
+            <li><a href="xiangshanMap.jsp">香山地图</a></li>
+            <li><a href="CustomMap.jsp">路线规划</a></li>
+            <li class="cur"><a href="recommend.jsp">景点</a></li>
+            <li><a href="./RedirectProcess.do?pageName=timeSpaceSearch">旅游集市</a></li>
+            <li><a href="./RedirectProcess.do?pageName=nearSearch">游记</a></li>
+        </ul>
+        <div class="curBg"></div>
+        <div class="cls"></div>
+    </div>
+    <div id="opk">
+        <ul>
+            <li><a href="login.jsp">登录</a></li>
+            <li>|</li>
+            <li><a href="register.jsp">注册</a></li>
+        </ul>
+    </div>
+</div>
+<!--分隔线-->
+<div style="position: relative;top: 52px;">
+    <img src="img/icon/分隔栏.png" style="width: 100%"/>
+</div>
+<!--子目录导航栏-->
+<div id="catalog">
+    <ul id="ntr">
+        <li>
+            <img src="img/icon/景点.png" style=" width: 50px;height: 50px;">
+        </li>
+        <li><a href="#">区域分类&nbsp;&nbsp;&nbsp;&or;</a>
+            <ul class="qs">
+                <li><a href="#">目录1</a></li>
+                <li><a href="#">目录2</a></li>
+            </ul>
+        </li>
+        <li><a href="#">景点分类&nbsp;&nbsp;&nbsp;&or;</a>
+            <ul class="qs">
+                <li><a href="#">分类1</a></li>
+                <li><a href="#">分类2</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<!--子目录导航栏下拉功能-->
+<script type="text/javascript">
+    //下拉函数
+    $(function(){
+        var _this1=null;
+        $('#ntr>li').hover(function(){
+                _this1=$(this);
+                _this1.find('.qs').show();},
+            //隐藏函数
+            function(){
+                _this1.find('.qs').hide();
+            });
+    });
+</script>
+<!--小向导-->
+<div id="Sdirection" class="">
+    <p>区域分类----</p>
+</div>
+<!--景点列表-->
+<div id="scenicIntro" class="">
+    <div id="picture" class="">
+        <img src="${AoMenPhoto.get(0) }">
+    </div>
+    <div id="name" class="">
+        <h1><a href="./jump?flag=${AoMenTitle.get(0)}">${AoMenTitle.get(0)}</a></h1>
+        <img src="img/icon/星(1).png">
+    </div>
+    <div id="content" class="">
+        <p>${AoMenInfo.get(0)}</p>
+
+
+    </div>
+    <div>
+    
+    <p>${AoMenAddress.get(0)}</p>
+    </div>
+    <div id="picture" class="">
+        <img src="${AoMenPhoto.get(1) }">
+    </div>
+    <div id="name" class="">
+        <h1><a href="./jump?flag=${AoMenTitle.get(1)}">${AoMenTitle.get(1)}</a></h1>
+        <img src="img/icon/星(1).png">
+    </div>
+    <div id="content" class="">
+        <p>${AoMenInfo.get(1)}</p>
+
+
+    </div>
+    <div>
+    
+    <p>${AoMenAddress.get(1)}</p>
+    </div>
+    <div id="picture" class="">
+        <img src="${AoMenPhoto.get(2) }">
+    </div>
+    <div id="name" class="">
+        <h1><a href="./jump?flag=${AoMenTitle.get(2)}">${AoMenTitle.get(2)}</a></h1>
+        <img src="img/icon/星(1).png">
+    </div>
+    <div id="content" class="">
+        <p>${AoMenInfo.get(2)}</p>
+
+
+    </div>
+    <div>
+    
+    <p>${AoMenAddress.get(2)}</p>
+    </div>
+    <div class="line"></div>
+</div>
+</body>
+</html>
