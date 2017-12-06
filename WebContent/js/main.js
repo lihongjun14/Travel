@@ -28,8 +28,17 @@ require(['config'],function () {
             mapStyle:'amap://styles/7bc20b330c2db8e965c7414c31cf860e',
             features:['bg','building','point']
         });
+        
+        AMap.plugin(['AMap.ToolBar','AMap.Scale','AMap.OverView'], 
+        	    function(){
+        	        map.addControl(new AMap.ToolBar());
 
-        var city = ['珠海','中山','澳门特别行政区'];
+        	        map.addControl(new AMap.Scale());
+
+        	        map.addControl(new AMap.OverView({isOpen:true}));
+        	});
+        
+        var city = ['珠海市','中山市','澳门特别行政区'];
         var cityLngLat=[[113.32911,22.148046],[113.382391,22.521113],[113.562397,22.160448]];
         var pol = [];
 
@@ -169,9 +178,19 @@ require(['config'],function () {
 
         function setMarker(position,title) {
             var marker = new AMap.Marker({
-                icon: "images/地点.png",
+                icon: "img/地点.png",
                 position: position,
                 title:title
+            });
+            marker.on('mouseover', function() {
+            		var infoWindow = new AMap.InfoWindow({
+            			infoTitle: '<strong>这里是标题</strong>',
+                    infoBody: '<p class="my-desc"><strong>这里是内容。</strong> <br/> 高德地图 JavaScript API，是由 JavaScript 语言编写的应用程序接口，' +
+                        '它能够帮助您在网站或移动端中构建功能丰富、交互性强的地图应用程序</p>',
+                    //基点指向marker的头部位置
+                    offset: new AMap.Pixel(0, -31)
+                });
+            		infoWindow.open(map, marker.getPosition());
             });
             marker.setMap(map);
         }

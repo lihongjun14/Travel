@@ -14,21 +14,43 @@
 </head>
 <body>
 <!--首页导航栏-->
-<div id="header">
-    <img id="smalllogo" src="img/picture/smalllogo.png" />
-    <div id="nav">
-        <ul>
-            <li><a href="index.jsp">首页</a></li>
-            <li><a href="travel_atlas.jsp">旅游图谱</a></li>
-            <li><a href="xiangshanMap.jsp">香山地图</a></li>
-            <li><a href="CustomMap.jsp">路线规划</a></li>
-            <li class="cur"><a href="recommend.jsp">景点</a></li>
-            <li><a href="./RedirectProcess.do?pageName=timeSpaceSearch">旅游集市</a></li>
-            <li><a href="./RedirectProcess.do?pageName=nearSearch">游记</a></li>
-        </ul>
-        <div class="curBg"></div>
-        <div class="cls"></div>
-    </div>
+<div id="header" >
+        <!--<img id="smalllogo" src="img/picture/smalllogo.png" />-->
+        <div id="nav">
+            <ul>
+                <li class="cur"><a href="index.jsp">首页</a></li>
+                <li><a href="travel_atlas.jsp">旅游图谱</a></li>
+                <li><a href="xiangshanMap.jsp">香山地图</a></li>
+                <li><a href="CustomMap.jsp">路线规划</a></li>
+                <li >
+                    <ul >
+                        <li class="dropdown" >
+                            <a href="./ShowAll" class="dropdown-toggle" data-toggle="dropdown" onmouseover="recommend()" >景点<strong class="caret"></strong> </a>
+                            <ul id="littlerecommend" >
+                                <li2 >
+                                    <a href="./ShowZhuHai">珠海</a>
+                                </li2>
+                                <br>
+                                <li2>
+                                    <a href="./ShowZhongShan">中山</a>
+                                </li2>
+                                <br>
+                                <li2>
+                                    <a href="./ShowAoMen">澳门</a>
+                                </li2>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="./RedirectProcess.do?pageName=timeSpaceSearch">旅游集市</a></li>
+                <li><a href="./RedirectProcess.do?pageName=nearSearch">游记</a></li>
+                <!--搜索框-->
+                <li><input id="input"  type="text" onfocus="searchbar()"  onblur="searchbar2()"></li>
+                <!--搜索框-->
+            </ul>
+            <div class="curBg"></div>
+            <div class="cls"></div>
+        </div>
     <div id="opk">
         <ul>
             <li><a href="login.jsp">登录</a></li>

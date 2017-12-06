@@ -19,43 +19,43 @@
 </head>
 <body style="background-color:#fff;">
 <!--首页导航栏-->
-<div id="header">
-    <img id="smalllogo" src="img/picture/smalllogo.png" />
-    <div id="nav">
-        <ul>
-            <li><a href="index.jsp">首页</a></li>
-            <li><a href="travel_atlas.jsp">旅游图谱</a></li>
-            <li><a href="xiangshanMap.jsp">香山地图</a></li>
-            <li><a href="CustomMap.jsp">路线规划</a></li>
-            <li class="cur">
-                <ul>
-                    <li class="dropdown">
-                        <a href="./ShowAll" class="dropdown-toggle" data-toggle="dropdown" >景点<strong class="caret"></strong> </a>
-                        <ul id=dropdown-menu">
-                            <li>
-                                <a href="./ShowZhuHai">珠海</a>
-                            </li>
-                            <br>
-                            <li>
-                                <a href="./ShowZhongShan">中山</a>
-                            </li>
-                            <br>
-                            <li>
-                                <a href="./ShowAoMen">澳门</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-            <li><a href="./RedirectProcess.do?pageName=timeSpaceSearch">旅游集市</a></li>
-            <li><a href="./RedirectProcess.do?pageName=nearSearch">游记</a></li>
-            <!--搜索框-->
-            <li><input id="input"  type="text" onfocus="searchbar()" ></li>
-            <!--搜索框-->
-        </ul>
-        <div class="curBg"></div>
-        <div class="cls"></div>
-    </div>
+<div id="header" >
+        <!--<img id="smalllogo" src="img/picture/smalllogo.png" />-->
+        <div id="nav">
+            <ul>
+                <li class="cur"><a href="index.jsp">首页</a></li>
+                <li><a href="travel_atlas.jsp">旅游图谱</a></li>
+                <li><a href="xiangshanMap.jsp">香山地图</a></li>
+                <li><a href="CustomMap.jsp">路线规划</a></li>
+                <li >
+                    <ul >
+                        <li class="dropdown" >
+                            <a href="./ShowAll" class="dropdown-toggle" data-toggle="dropdown" onmouseover="recommend()" >景点<strong class="caret"></strong> </a>
+                            <ul id="littlerecommend" >
+                                <li2 >
+                                    <a href="./ShowZhuHai">珠海</a>
+                                </li2>
+                                <br>
+                                <li2>
+                                    <a href="./ShowZhongShan">中山</a>
+                                </li2>
+                                <br>
+                                <li2>
+                                    <a href="./ShowAoMen">澳门</a>
+                                </li2>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="./RedirectProcess.do?pageName=timeSpaceSearch">旅游集市</a></li>
+                <li><a href="./RedirectProcess.do?pageName=nearSearch">游记</a></li>
+                <!--搜索框-->
+                <li><input id="input"  type="text" onfocus="searchbar()"  onblur="searchbar2()"></li>
+                <!--搜索框-->
+            </ul>
+            <div class="curBg"></div>
+            <div class="cls"></div>
+        </div>
     <div id="opk">
         <ul>
             <li><a href="login.jsp">登录</a></li>
@@ -165,20 +165,38 @@
 
 <!--</div>-->
 <!--热门景点栏目-->
-<div id="hot">
+<div class="container-fluid" id="like">
     <div><img src="img/icon/热门.png" style=" width: 50px;height: 50px;">热门景点</div>
-    <div>
-        <ul>
-            <li><img src="${ZhuHaiPhoto.get(0) }"><a href="./jump?flag=${ZhuHaiTitle.get(0)}">${ZhuHaiTitle.get(0)}</a></li>
-            <li><img src="${ZhuHaiPhoto.get(1) }"><a href="./jump?flag=${ZhuHaiTitle.get(1)}">${ZhuHaiTitle.get(1)}</a></li>
-            <li><img src="${ZhuHaiPhoto.get(2) }"><a href="./jump?flag=${ZhuHaiTitle.get(2)}">${ZhuHaiTitle.get(2)}</a></li>
-            <li><img src="${ZhuHaiPhoto.get(3) }"><a href="./jump?flag=${ZhuHaiTitle.get(3)}">${ZhuHaiTitle.get(3)}</a></li>
-            <li><img src="${ZhuHaiPhoto.get(4) }"><a href="./jump?flag=${ZhuHaiTitle.get(4)}">${ZhuHaiTitle.get(4)}</a></li>
-            <li><img src="${ZhuHaiPhoto.get(5) }"><a href="./jump?flag=${ZhuHaiTitle.get(5)}">${ZhuHaiTitle.get(5)}</a></li>
-            <li><a href="./ShowZhuHaiDetail">更多</a></li>
-        </ul>
-    </div>
-    <div><a id="more" href="#">换一批</a></div>
+   
+ <div class="row clearfix">
+        <div class="col-md-4 column">
+            <img src="${ZhuHaiPhoto.get(0) }" class="img-rounded"/>
+            <span class="suibian"><a href="./jump?flag=${ZhuHaiTitle.get(0)}">${ZhuHaiTitle.get(0)}</a></span>
+        </div>
+        <div class="col-md-4 column">
+            <img src="${ZhuHaiPhoto.get(1) }" class="img-rounded"/>
+            <span class="suibian"><a href="./jump?flag=${ZhuHaiTitle.get(1)}">${ZhuHaiTitle.get(1)}</a></span>
+        </div>
+        <div class="col-md-4 column">
+            <img src="${ZhuHaiPhoto.get(2) }" class="img-rounded"/>
+            <span class="suibian"><a href="./jump?flag=${ZhuHaiTitle.get(2)}">${ZhuHaiTitle.get(2)}</a></span>
+        </div>
+          <div class="col-md-4 column">
+            <img src="${ZhuHaiPhoto.get(3) }" class="img-rounded"/>
+            <span class="suibian"><a href="./jump?flag=${ZhuHaiTitle.get(3)}">${ZhuHaiTitle.get(3)}</a></span>
+        </div>
+        <div class="col-md-4 column">
+            <img src="${ZhuHaiPhoto.get(4) }" class="img-rounded"/>
+            <span class="suibian"><a href="./jump?flag=${ZhuHaiTitle.get(4)}">${ZhuHaiTitle.get(4)}</a></span>
+        </div>
+        <div class="col-md-4 column">
+            <img src="${ZhuHaiPhoto.get(5) }" class="img-rounded"/>
+            <span class="suibian"><a href="./jump?flag=${ZhuHaiTitle.get(5)}">${ZhuHaiTitle.get(5)}</a></span>
+        </div>
+          </div>
+    
+  
+     <li><a id="more" href="./ShowZhuHaiDetail">更多</a></li>
 </div>
 <!--当地美食栏目-->
 <div id="deliciousfood">

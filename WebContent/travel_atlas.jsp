@@ -19,51 +19,53 @@
     <script type="text/javascript" src="js/events.js"></script>
     <script type="text/javascript" src="js/jquery.ztree.core.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
-    <script>
-        var args = {"date":new Date()};
-        var setting = {
-            async: {
-                enable: true,
-                url:"CatalogProcess.do",
-                autoParam:["name"]
-            },
-            callback: {
-                onClick: listInstances
-            }
-        };
-        var zNodes =[{ "name":"知识分类","iconOpen":"icon/foldericon_alter.gif","iconClose":"icon/unfoldericon_alter.gif","icon":"icon/unfoldericon_alter.gif","isParent":"true"}];
-
-        $(document).ready(function(){
-            $.fn.zTree.init($("#classes"), setting, zNodes);
-        });
-    </script>
+    
 </head>
 <body>
 <nav class="navbar navbar-default" role="navigation">
     <div class="container-fluid">
-        <div id="header">
-            <img id="smalllogo" src="img/picture/smalllogo.png" />
-            <div id="nav">
-                <ul>
-                    <li><a href="index.html">首页</a></li>
-                    <li class="cur"><a href="travel_atlas.html">旅游图谱</a></li>
-                    <li><a href="map.html">香山地图</a></li>
-                    <li><a href="route.html">路线规划</a></li>
-                    <li><a href="recommend.html">景点</a></li>
-                    <li><a href="./RedirectProcess.do?pageName=timeSpaceSearch">旅游集市</a></li>
-                    <li><a href="./RedirectProcess.do?pageName=nearSearch">游记</a></li>
-                    <!--搜索框-->
-                    <li><input id="input"  type="text" onfocus="searchbar()"></li>
-                    <!--搜索框-->
-                </ul>
-                <div class="curBg"></div>
-                <div class="cls"></div>
-            </div>
+        <div id="header" >
+        <!--<img id="smalllogo" src="img/picture/smalllogo.png" />-->
+        <div id="nav">
+            <ul>
+                <li class="cur"><a href="index.jsp">首页</a></li>
+                <li><a href="travel_atlas.jsp">旅游图谱</a></li>
+                <li><a href="xiangshanMap.jsp">香山地图</a></li>
+                <li><a href="CustomMap.jsp">路线规划</a></li>
+                <li >
+                    <ul >
+                        <li class="dropdown" >
+                            <a href="./ShowAll" class="dropdown-toggle" data-toggle="dropdown" onmouseover="recommend()" >景点<strong class="caret"></strong> </a>
+                            <ul id="littlerecommend" >
+                                <li2 >
+                                    <a href="./ShowZhuHai">珠海</a>
+                                </li2>
+                                <br>
+                                <li2>
+                                    <a href="./ShowZhongShan">中山</a>
+                                </li2>
+                                <br>
+                                <li2>
+                                    <a href="./ShowAoMen">澳门</a>
+                                </li2>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="./RedirectProcess.do?pageName=timeSpaceSearch">旅游集市</a></li>
+                <li><a href="./RedirectProcess.do?pageName=nearSearch">游记</a></li>
+                <!--搜索框-->
+                <li><input id="input"  type="text" onfocus="searchbar()"  onblur="searchbar2()"></li>
+                <!--搜索框-->
+            </ul>
+            <div class="curBg"></div>
+            <div class="cls"></div>
+        </div>
             <div id="opk">
                 <ul>
-                    <li><a href="index.html">社区</a></li>
+                    <li><a href="index.jsp">社区</a></li>
                     <li>|</li>
-                    <li><a href="index.html">个人</a></li>
+                    <li><a href="index.jsp">个人</a></li>
                     <li class="img"><img src="img/icon/用户.png" width="45" height="45"></li>
                 </ul>
             </div>

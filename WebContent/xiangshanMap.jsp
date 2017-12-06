@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <title>香山景点图</title>
     <link type="text/css" rel="stylesheet" href="css/XiangshanMap.css"/>
+    <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.4.0&key=c164752710e569fad431743aa3669262"></script>
     <script src="lib/require.js" data-main="js/main"></script>
 </head>
 <body>

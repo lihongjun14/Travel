@@ -1,62 +1,33 @@
-#like {                                      /*模块位置*/
-    position: relative;
-    top: 90px;
-}
-#like div{                                  /*题目样式*/
-    position: relative;
-    top: 10px;
-    width: auto;
-    height: auto;
-    font-size: 120%;
-    font-family: 微软雅黑;
-}
-#like div ul li{                                /*图片样式*/
-    display: inline;
-    margin: 10px 1%;
-}
-#like div img{
-    width: 30%;
-    height: 200px;
-    margin-top: 20px;
-}
-#like a{
-    font-family: 微软雅黑;
-    text-decoration: none;
-    float: right;
-}
-#like a:link a:visited{
-    color: black;
-}
-#like a:hover{
-    color: #42b3fb;
-}
 
-#hot {                                         /*模块位置*/
+#hot {                                         /*妯″潡浣嶇疆*/
     position: relative;
     top: 150px;
 }
-#hot div{                                      /*题目样式*/
+#hot div{                                      /*棰樼洰鏍峰紡*/
     position: relative;
     top: 10px;
     width: auto;
     height: auto;
     font-size: 120%;
-    font-family: 微软雅黑;
+    font-family: 寰蒋闆呴粦;
 }
-#hot div ul li{                                 /*图片样式*/
+#hot div ul li{                                 /*鍥剧墖鏍峰紡*/
     display: inline;
-    margin: 10px 1%;
+    margin: 10px 0%;
+    width:100px;
 }
 #hot div img{
-    width: 30%;
+    width: 25%;
     height: 200px;
     margin-top: 20px;
 }
 
 #hot a{
-    font-family: 微软雅黑;
+    font-family: 寰蒋闆呴粦;
     text-decoration: none;
-    float:right;
+    position:relative;
+    right:250px;
+    top:100px;
 }
 
 #hot a:link a:visited{
@@ -65,7 +36,7 @@
 #hot a:hover{
     color: #42b3fb;
 }
-/*分类栏*/                                                 /*分类栏*/
+/*鍒嗙被鏍�*/                                                 /*鍒嗙被鏍�*/
 #zhuhaivariety{
     position: relative;
     top: 95px;
@@ -73,7 +44,7 @@
     /*background-color:#fff;*/
 }
 #zhuhaivarietyhead{
-    font-family: 微软雅黑;
+    font-family: 寰蒋闆呴粦;
     font-size: 25px;
     font-weight: bold;
     padding: 0px 30px;
@@ -98,24 +69,24 @@
 #zhuhaivariety ul li img{
 
 }
-/*分类栏*/
+/*鍒嗙被鏍�*/
 
-/*当地美食*/                                               /*当地美食*/
+/*褰撳湴缇庨*/                                               /*褰撳湴缇庨*/
 #deliciousfood{
     position: relative;
     top: 150px;
 }
 
-#deliciousfood div{                                      /*题目样式*/
+#deliciousfood div{                                      /*棰樼洰鏍峰紡*/
     position: relative;
     top: 10px;
     width: auto;
     height: auto;
     font-size: 120%;
-    font-family: 微软雅黑;
+    font-family: 寰蒋闆呴粦;
 }
 
-#deliciousfood div ul li{                                 /*图片样式*/
+#deliciousfood div ul li{                                 /*鍥剧墖鏍峰紡*/
     display: inline;
     margin: 10px 1%;
 }
@@ -125,7 +96,7 @@
     margin-top: 20px;
 }
 #deliciousfood a{
-    font-family: 微软雅黑;
+    font-family: 寰蒋闆呴粦;
     text-decoration: none;
     float: right;
 }
@@ -135,9 +106,9 @@
 #deliciousfood a:hover{
     color: #42b3fb;
 }
-/*当地美食*/
+/*褰撳湴缇庨*/
 
-/*旅游产品*/
+/*鏃呮父浜у搧*/
 #product{
     position: relative;
     top: -21px;
@@ -145,8 +116,8 @@
     font-size: 15px;
 }
 
-/*旅游产品*/
-#zhuhaiFooter{                                           /* 网页脚注*/
+/*鏃呮父浜у搧*/
+#zhuhaiFooter{                                           /* 缃戦〉鑴氭敞*/
     background-color: #c3dfe8;
     position:relative;
     top:400px;
@@ -156,13 +127,74 @@
     margin:0px;
     padding:0px;
     text-align:center;
-    font-family:微软雅黑;
+    font-family:寰蒋闆呴粦;
     font-size:10px;
 }
 
-/*换一批*/                                                   /*换一批*/
+/*鎹竴鎵�*/                                                   /*鎹竴鎵�*/
 #more{
-    position: relative;
-    left: -50px;
+    position:relative;
+    float:left;    
 }
-/*换一批*/
+/*鎹竴鎵�*/
+
+#whitebox{
+	width:200px;
+	height:30px;
+	top:190px;
+	left:50px;
+	background-color:black;
+	position:absolute;
+}
+
+
+
+
+
+
+#like {                                      /*模块位置*/
+    position: relative;
+    top: 150px;
+
+}
+
+#like a{
+    font-family: 微软雅黑;
+    text-decoration: none;
+}
+
+#like a:link {
+    color: black;
+}
+#like a:visited{
+    color: black;
+}
+#like a:hover{
+    color: #42b3fb;
+}
+
+
+#like p{                                  /*题目样式*/
+    font-size: 120%;
+    font-family: 微软雅黑;
+}
+
+#like img{
+    width: 400px;
+    height: 200px;
+}
+
+.suibian{
+    background-color: white;
+    opacity: 0.6;
+    width: 100%;
+    height: 26px;
+    line-height: 26px;
+    font-size: 20px;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    text-align: center;
+    font-family:微软雅黑;
+    
+}

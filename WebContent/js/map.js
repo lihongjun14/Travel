@@ -75,7 +75,6 @@ AMap.plugin(["AMap.PlaceSearch"], function () {
         map: map,
         panel: "panel",
         renderStyle:"newpc",
-        type:"汽车服务|汽车销售|汽车维修|摩托车服务|餐饮服务|购物服务|生活服务|体育休闲服务|医疗保健服务|住宿服务|风景名胜|商务住宅|政府机构及社会团体|科教文化服务|交通设施服务|金融保险服务|公司企业|道路附属设施|地名地址信息|公共设施"
     });
     placeSearch.on("listElementClick",function (e) {
         
@@ -205,7 +204,7 @@ function addsight() {
     input.placeholder = "第" + sight_num + "地点";
 
     var deletediv = document.createElement("img");
-    deletediv.src = "images/delete.png";
+    deletediv.src = "img/delete.png";
     deletediv.style.marginTop = "8px";
     deletediv.style.position = "absolute";
     deletediv.style.left = "1%";
@@ -233,7 +232,7 @@ function addsight() {
     var img = document.createElement("img");
     img.className = "hotshow";
     img.id = "hot" + sight_num;
-    img.src = "images/more.png";
+    img.src = "img/more.png";
 
     var clearFloatDiv = document.createElement("div");
     clearFloatDiv.style.clear = "both";
@@ -413,7 +412,7 @@ function inithotshow(id) {
     div.style.top = document.getElementById(id).offsetTop + "px";
 
     var close = document.createElement("img");
-    close.src = "images/close.png";
+    close.src = "img/close.png";
     close.style.position = "absolute";
     close.style.top = "0";
     close.style.right = "0";
